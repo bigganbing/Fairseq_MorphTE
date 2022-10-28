@@ -1,3 +1,5 @@
+Codes  for the NeurIPS 2022 paper `MorphTE: Injecting Morphology in Tensorized Embeddings`.
+
 ### Requirements and Installation
 
 - torch >= 1.9.0
