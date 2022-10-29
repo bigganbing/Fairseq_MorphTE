@@ -33,6 +33,8 @@ python preprocess.py --source-lang $src --target-lang $tgt \
 python mor_for_bpe_corpus_sep.py
 ```
 
+The processed IWSLT14-De-En dataset is available [here](https://drive.google.com/file/d/1-5v6W8rLklz4K_Q6x1Nsni8dleSxIoGf/view?usp=sharing).
+
 #### 2. Training && Evaluating
 
 ##### (1) MorphTE Embedding
@@ -65,6 +67,8 @@ CUDA_VISIBLE_DEVICES=$CUDA_ID python train.py $DATD_DIR \
 # Evaluating
 CUDA_VISIBLE_DEVICES=$CUDA_ID python generate.py $DATD_DIR --path checkpoints/${SAVE_DIR}/checkpoint_best.pt --emb_mode $EMB_MODE --emb_rank $EMB_RANK --mor_path $MOR_PATH --batch-size 128 --beam 5 --remove-bpe --quiet | tee -a  checkpoints/${SAVE_DIR}/run.log
 ```
+
+A trained Transformer model with MorphTE on IWSLT14-De-En is available [here](https://drive.google.com/file/d/1--V_qZZyCLV2KuQYX-dfQT4I71orBPuX/view?usp=sharing).
 
 ##### (2) Original Embedding
 
